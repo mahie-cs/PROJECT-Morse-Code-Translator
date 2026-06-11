@@ -93,10 +93,10 @@ def generate_morse_audio(morse_code, filename="morse_output.wav"):
 
     unit_duration = 0.06
     dot_duration = unit_duration
-    dash_duration = unit_duration * 5
-    element_gap = unit_duration  # Gap between dots/dashes within a letter
-    letter_gap = unit_duration * 3  # Gap between letters
-    word_gap = unit_duration * 7  # Gap between words
+    dash_duration = unit_duration * 5 # Duration was increased from 3x to 5x to make it clearer. For authentic experience, change it to unit_duration * 3. If your ears can keep up that is.
+    element_gap = unit_duration  # Gap between dots and dashes within a letter. I wanted to do unit_duration * 2 here. But that seemed unnecessary.
+    letter_gap = unit_duration * 3
+    word_gap = unit_duration * 7  # Gap between words. I would've made it unit_duration * 5. But * 7 sounded just right
 
     audio_frames = []
 
